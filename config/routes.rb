@@ -1,4 +1,9 @@
 Escola::Application.routes.draw do
+  resources :empresas
+
+  devise_for :users
+  resources :users
+
   get "welcome/index"
 
   # The priority is based upon order of creation:
