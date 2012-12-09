@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-    @current_mothod = "new"
+    @current_method = "new"
 
     respond_to do |format|
       format.html # new.html.erb

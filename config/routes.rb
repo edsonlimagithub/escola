@@ -1,4 +1,6 @@
 Escola::Application.routes.draw do
+  resources :roles
+
   resources :empresas
 
   devise_for :users
