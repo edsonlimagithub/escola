@@ -35,8 +35,7 @@
     </div>
   <% end %>
     <div>
-      <%= f.select %>
-      <%= empresa.name %>
+      <%= f.select :empresa_id, Empresa.all.collect {|empresa| [empresa.descricao, empresa.id] }, {:prompt => 'Empresa'} %>
     </div>
   <div class="actions">
     <%= f.submit %>

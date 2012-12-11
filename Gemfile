@@ -10,7 +10,7 @@ gem 'therubyracer'
 gem 'devise'
 gem 'cancan'
 gem 'capistrano'
-gem 'multi_json' #, '~> 1.0.4'
+#gem 'multi_json' #, '~> 1.0.4'
 
 
 # Gems used only for assets and not required
