@@ -29,8 +29,7 @@
     <!-- END: load jquery -->
     <!--Fancy Button-->
     <%= javascript_include_tag "fancy-button/fancy-button.js"%>
-     <script type="text/javascript" src="js/table/table.js"></script>
-    <%= javascript_include_tag "table/table.js" %>
+    <%= javascript_include_tag "tiny-mce/plugins/table/js/table.js" %>
     <script type="text/javascript">
     </script>
     <style type="text/css">
@@ -46,20 +45,23 @@
             <div id="branding">
                 <div class="floatleft">
                     <%= image_tag("logo.png", :alt => "Logo")%></div>
-                <div class="floatright">
-                    <div class="floatleft">
-                        <%= image_tag "img-profile.jpg", :alt => "Usuário" %></div>
-                    <div class="floatleft marginleft10">
-                        <ul class="inline-ul floatleft">
-                            <li>Hello</li>
-                            
-  							<li>
-  							</li>
-                        </ul>
-                        <br />
-                        <span class="small grey">Last Login: 3 hours ago</span>
-                    </div>
-                </div>
+                <% if user_signed_in? %>
+	                <div class="floatright">
+	                    <div class="floatleft">
+	                        <%= image_tag "img-profile.jpg", :alt => "Usuário" %></div>
+	                    <div class="floatleft marginleft10">
+	                        <ul class="inline-ul floatleft">
+	                            <li><%= current_user.username %></li>
+	                            
+	  							<li>
+	  								<%= link_to('Sair', destroy_user_session_path, :method => :delete) %> 
+	  							</li>
+	                        </ul>
+	                        <br />
+	                        <span class="small grey">Last Login: 3 hours ago</span>
+	                    </div>
+	                </div>
+                <% end %>
                 <div class="clear">
                 </div>
             </div>
@@ -90,6 +92,7 @@
         </div>
         <div class="clear">
         </div>
+        <h3><%= flash[:error] %></h3>
         <%= yield %>
     <div class="clear">
     </div>

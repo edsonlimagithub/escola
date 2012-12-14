@@ -30,11 +30,12 @@
   <% end %>
   <% for role in Role.find(:all) %>
     <div>
-      <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+      <%= check_box_tag "user[role_ids]", role.id, @user.roles.include?(role) %>
       <%= role.name %>
     </div>
   <% end %>
     <div>
+    	<p>Empresa</p>
       <%= f.select :empresa_id, Empresa.all.collect {|empresa| [empresa.descricao, empresa.id] }, {:prompt => 'Empresa'} %>
     </div>
   <div class="actions">
