@@ -3,7 +3,7 @@ Escola::Application.routes.draw do
 
   resources :empresas
 
-  devise_for :users
+  devise_for :users, :path_prefix => 'my'
   resources :users
 
   get "welcome/index"

@@ -1,4 +1,6 @@
 class EmpresasController < ApplicationController
+  load_and_authorize_resource
+  
   # GET /empresas
   # GET /empresas.json
   def index
