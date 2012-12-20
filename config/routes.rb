@@ -1,4 +1,6 @@
 Escola::Application.routes.draw do
+  resources :alunos
+
   resources :roles
 
   resources :empresas

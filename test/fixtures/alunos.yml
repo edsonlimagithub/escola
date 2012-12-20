@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  matricula: 1
+  nome: MyString
+  data_nascimento: 2012-12-20
+  logradouro: MyString
+  logradouro_numero: MyString
+  logradouro_complemento: MyString
+  bairro: MyString
+  cidade: MyString
+  uf: MyString
+  tipo_sanguineo: MyString
+  data_vencimento: 2012-12-20
+  sexo: MyString
+  fone: MyString
+  fone2: MyString
+  observacao: MyText
+
+two:
+  matricula: 1
+  nome: MyString
+  data_nascimento: 2012-12-20
+  logradouro: MyString
+  logradouro_numero: MyString
+  logradouro_complemento: MyString
+  bairro: MyString
+  cidade: MyString
+  uf: MyString
+  tipo_sanguineo: MyString
+  data_vencimento: 2012-12-20
+  sexo: MyString
+  fone: MyString
+  fone2: MyString
+  observacao: MyText

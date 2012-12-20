@@ -11,7 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121209011119) do
+ActiveRecord::Schema.define(:version => 20121220133148) do
+
+  create_table "alunos", :force => true do |t|
+    t.integer  "matricula"
+    t.string   "nome"
+    t.date     "data_nascimento"
+    t.string   "logradouro"
+    t.string   "logradouro_numero"
+    t.string   "logradouro_complemento"
+    t.string   "bairro"
+    t.string   "cidade"
+    t.string   "uf"
+    t.string   "tipo_sanguineo"
+    t.date     "data_vencimento"
+    t.string   "sexo"
+    t.string   "fone"
+    t.string   "fone2"
+    t.text     "observacao"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+    t.integer  "dia_vencimento"
+  end
 
   create_table "empresas", :force => true do |t|
     t.string   "descricao"
