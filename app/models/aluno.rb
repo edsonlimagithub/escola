@@ -4,4 +4,5 @@ class Aluno < ActiveRecord::Base
   
   validates :empresa, :presence => true
   belongs_to :empresa
+  has_many :mensalidades
 end

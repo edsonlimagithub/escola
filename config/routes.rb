@@ -9,6 +9,8 @@ Escola::Application.routes.draw do
   resources :users
 
   get "welcome/index"
+  
+  match '/financeiro/aluno_mensalidades/:id' => 'financeiro#aluno_mensalidades'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
