@@ -37,181 +37,34 @@
 	         <button class="btn-icon btn-grey btn-plus" onclick="alerta();"><span></span>Gerar Mensalidade</button>
 	    </form>
 	    </div>
-	    	
-	    	
-	    	      
                     <table class="data display datatable" id="example">
 					<thead>
 						<tr>
-							<th>Rendering engine</th>
-							<th>Browser</th>
-							<th>Platform(s)</th>
-							<th>Engine version</th>
-							<th>CSS grade</th>
+							<th>Valor</th>
+							<th>Vecimento</th>
+							<th>Juros</th>
+							<th>Multa</th>
+							<th>Desconto</th>
+							<th>Total</th>
+							<th>Dias Vencidos</th>
+							<th>Quitação</th>
+							<th>Carnês</th>
 						</tr>
 					</thead>
 					<tbody>
+						<% @aluno.mensalidades.each do |mensalidade| %>
 						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
+							<td><%= mensalidade.valor %></td>
+							<td><%= mensalidade.vencimento %></td>
+							<td>juros</td>
+							<td>multa</td>
+							<td>desconto</td>
+							<td>total</td>
+							<td>dias vencidos</td>
+							<td><%= mensalidade.data_quitacao%></td>
+							<td><input type="checkbox" /></td>
 						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center"><input type="checkbox"/></td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Win 95+</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						<tr class="odd gradeX">
-							<td>Trident</td>
-							<td>Internet
-								 Explorer 4.0</td>
-							<td>Linux</td>
-							<td class="center"> 4</td>
-							<td class="center">X</td>
-						</tr>
-						
+						<% end %>
 	    		</tbody>
 	    	</table>
 	    	
