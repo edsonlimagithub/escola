@@ -1,4 +1,5 @@
 class AlunosController < ApplicationController
+  before_filter :authenticate_user!
   # GET /alunos
   # GET /alunos.json
   def index

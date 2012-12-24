@@ -1,8 +1,37 @@
+<script type="text/javascript">
+	$(function(){
+        $( "#data_vencimento" ).datepicker($.datepicker.regional[ "pt-BR" ]);
+	
+		$('.datatable').dataTable({
+			"sPaginationType": "full_numbers"
+		});
+		
+		$('#valor').priceFormat({
+			prefix: 'R$ ',
+    		centsSeparator: ',',
+    		thousandsSeparator: '.'
+		});
+		
+		$('#quantidade').add("#intervalo").priceFormat({
+			prefix: '',
+    		centsSeparator: '',
+    		thousandsSeparator: ''
+		});
+	
+	});
+	
+	var enviaFormGeraMensalidade = function(){
+		$("#formGeraMensalidade").submit();
+	}
+	
+</script>
+
 <div class="grid_10">
 	<div class="box round first grid">
     	<h2><%= @aluno.nome %></h2>
     	<div class="block ">
-    	<form>
+    	<form id="formGeraMensalidade" method="post" action="/financeiro/gerar_mensalidades">
+    		<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/> 
 	        <table class="form">
 	            <tr>
 	                <td class="col1">
@@ -15,26 +44,26 @@
 	                    <label>Quantidade</label>
 	                </td>
 	                <td class="col1">
-	                    <label>Intervalo</label>
+	                    <label>Intervalo(dias)</label>
 	                </td>
 	                
 	            </tr>
 	            <tr>
 	            	<td class="col1">
-	                    <input type="text" id="valor" />
+	                    <input type="text" id="valor" name="valor"/>
+	                </td>
+	                <td>
+                       <input type="text" id="data_vencimento" name="data_vencimento"/>
+                    </td>
+	                <td class="col1">
+	                    <input type="text" id="quantidade" name="quantidade" value="1" size="3" />
 	                </td>
 	                <td class="col1">
-	                    <input type="text" id="data" />
-	                </td>
-	                <td class="col1">
-	                    <input type="text" id="quantidade" />
-	                </td>
-	                <td class="col1">
-	                    <input type="text" id="intervalo" />
+	                    <input type="text" id="intervalo" name="intervalo" value="30" size="3" />
 	                </td>
 	            </tr>
 	         </table>
-	         <button class="btn-icon btn-grey btn-plus" onclick="alerta();"><span></span>Gerar Mensalidade</button>
+	         <button class="btn-icon btn-grey btn-plus" onclick="enviaFormGeraMensalidade();"><span></span>Gerar Mensalidade</button>
 	    </form>
 	    </div>
                     <table class="data display datatable" id="example">
@@ -71,14 +100,4 @@
 	    	
 	</div>
 </div>
-<script type="text/javascript">
-	var alerta = function(){
-		alert("aqui");
-	}
-	
-	$('.datatable').dataTable({
-		"sPaginationType": "full_numbers"
-	});
-			setSidebarHeight();
-	
-</script>
+

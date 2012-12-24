@@ -17,27 +17,46 @@
     <%= stylesheet_link_tag "themes/base/jquery.ui.all" %>
     
     <!-- BEGIN: load jquery -->
-    <%= javascript_include_tag "jquery-1.6.4.min.js" %>
-    <%= javascript_include_tag "jquery-ui/jquery.ui.core.min.js" %>
-    <%= javascript_include_tag "jquery-ui/jquery.ui.widget.min.js" %>
-    <%= javascript_include_tag "jquery-ui/jquery.ui.accordion.min.js" %>
-    <%= javascript_include_tag "jquery-ui/jquery.effects.core.min.js" %>
-    <%= javascript_include_tag "jquery-ui/jquery.effects.slide.min.js" %>
-    <%= javascript_include_tag "jquery-ui/jquery.ui.mouse.min.js"%>
-    <%= javascript_include_tag "jquery-ui/jquery.ui.sortable.min.js"%>
-    <%= javascript_include_tag "table/jquery.dataTables.min.js"%>
+    <%= javascript_include_tag "jquery-1.6.4.min" %>
+    <%= javascript_include_tag "jquery-ui/jquery.ui.core.min" %>
+    <%= javascript_include_tag "jquery-ui/jquery.ui.accordion.min" %>
+    <%= javascript_include_tag "jquery-ui/jquery.effects.core.min" %>
+    <%= javascript_include_tag "jquery-ui/jquery.effects.slide.min" %>
+    
+    <%= javascript_include_tag "jquery-ui/jquery.ui.mouse.min"%>
+    <%= javascript_include_tag "jquery-ui/jquery.ui.sortable.min"%>
+    <%= javascript_include_tag "table/jquery.dataTables.min"%>
     <!-- END: load jquery -->
+    <!--jQuery Date Picker-->
+    <%= javascript_include_tag "jquery-ui/jquery.ui.widget.min"%>
+    <%= javascript_include_tag "jquery-ui/jquery.ui.datepicker.min"%>
+    <%= javascript_include_tag "jquery-ui/jquery.ui.progressbar.min"%>
     <!--Fancy Button-->
-    <%= javascript_include_tag "fancy-button/fancy-button.js"%>
-    <%= javascript_include_tag "tiny-mce/plugins/table/js/table.js" %>
-    <script type="text/javascript">
-    </script>
+    <%= javascript_include_tag "fancy-button/fancy-button"%>
+    <%= javascript_include_tag "tiny-mce/plugins/table/js/table" %>
+     <!-- jQuery dialog related-->
+    <%= javascript_include_tag "jquery-ui/external/jquery.bgiframe-2.1.2" %>
+    <%= javascript_include_tag "jquery-ui/jquery.ui.draggable.min" %>
+    <%= javascript_include_tag "jquery-ui/jquery.ui.position.min" %>
+    <%= javascript_include_tag "jquery-ui/jquery.ui.resizable.min" %>
+    <%= javascript_include_tag "jquery-ui/jquery.ui.dialog.min" %>
+    <%= javascript_include_tag "jquery-ui/jquery.effects.core.min" %>
+    <%= javascript_include_tag "jquery-ui/jquery.effects.blind.min" %>
+    <%= javascript_include_tag "jquery-ui/jquery.effects.explode.min" %>
+    
+    <%= javascript_include_tag "jquery.price_format.1.7.min" %>
+    
+    <%= javascript_include_tag "jquery-ui/jquery.ui.accordion.min"%>
+    <%= javascript_include_tag "fancy-button/fancy-button"%>
+     <!-- Load TinyMCE -->
+    <%= javascript_include_tag "tiny-mce/jquery.tinymce"%>
     <style type="text/css">
         #progress-bar
         {
             width: 400px;
         }
     </style>
+    
 </head>
 <body>
     <div class="container_12">
@@ -103,3 +122,5 @@
     </div>
 </body>
 </html>
+
+

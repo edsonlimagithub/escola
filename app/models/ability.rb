@@ -5,7 +5,7 @@ class Ability
     if user.role? :administrador
       can :manage, :all
     elsif user.role? :operador  
-      can :manage, :alunos
+      can :manage, :alunos, :financeiro
     end
   end
 end
