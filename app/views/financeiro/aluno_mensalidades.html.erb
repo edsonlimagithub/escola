@@ -12,7 +12,7 @@
     		thousandsSeparator: '.'
 		});
 		
-		$('#quantidade').add("#intervalo").priceFormat({
+		$('#quantidade').add("#dia_vencimento").priceFormat({
 			prefix: '',
     		centsSeparator: '',
     		thousandsSeparator: ''
@@ -32,6 +32,7 @@
     	<div class="block ">
     	<form id="formGeraMensalidade" method="post" action="/financeiro/gerar_mensalidades">
     		<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/> 
+    		<input type="hidden" name="aluno_id" value="<%= @aluno.id %>" />
 	        <table class="form">
 	            <tr>
 	                <td class="col1">
@@ -44,7 +45,7 @@
 	                    <label>Quantidade</label>
 	                </td>
 	                <td class="col1">
-	                    <label>Intervalo(dias)</label>
+	                    <label>Dia Vencimento</label>
 	                </td>
 	                
 	            </tr>
@@ -59,7 +60,7 @@
 	                    <input type="text" id="quantidade" name="quantidade" value="1" size="3" />
 	                </td>
 	                <td class="col1">
-	                    <input type="text" id="intervalo" name="intervalo" value="30" size="3" />
+	                    <input type="text" id="dia_vencimento" name="dia_vencimento" value="<%= @aluno.dia_vencimento %>" size="3" />
 	                </td>
 	            </tr>
 	         </table>
@@ -70,7 +71,7 @@
 					<thead>
 						<tr>
 							<th>Valor</th>
-							<th>Vecimento</th>
+							<th>Vencimento</th>
 							<th>Juros</th>
 							<th>Multa</th>
 							<th>Desconto</th>

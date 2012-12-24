@@ -4,7 +4,7 @@ class Ability
   def initialize(user)
     if user.role? :administrador
       can :manage, :all
-    elsif user.role? :operador  
+    elsif user.role? :operador 
       can :manage, :alunos, :financeiro
     end
   end
