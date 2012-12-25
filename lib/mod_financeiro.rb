@@ -6,7 +6,6 @@ module ModFinanceiro
                                    :vencimento => data_vencimento,
                                    :empresa_id => current_user.empresa_id})
     mensalidade.save
-    return mensalidade.id
   end 
   
 end
