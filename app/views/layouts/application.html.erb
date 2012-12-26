@@ -4,11 +4,11 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Sistema Escolar</title>
-    <%= stylesheet_link_tag "reset", :media => "screen" %>
-    <%= stylesheet_link_tag "text", :media => "screen" %>
-    <%= stylesheet_link_tag "grid", :media => "screen" %>
+    <%= stylesheet_link_tag "reset",  :media => "screen" %>
+    <%= stylesheet_link_tag "text",   :media => "screen" %>
+    <%= stylesheet_link_tag "grid",   :media => "screen" %>
     <%= stylesheet_link_tag "layout", :media => "screen" %>
-    <%= stylesheet_link_tag "nav", :media => "screen" %>
+    <%= stylesheet_link_tag "nav",    :media => "screen" %>
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
     <%= stylesheet_link_tag "fancy-button/fancy-button" %>
@@ -50,6 +50,8 @@
     <%= javascript_include_tag "fancy-button/fancy-button"%>
      <!-- Load TinyMCE -->
     <%= javascript_include_tag "tiny-mce/jquery.tinymce"%>
+    
+    <%= javascript_include_tag 'setup' %>
     <style type="text/css">
         #progress-bar
         {
@@ -95,7 +97,7 @@
                     <ul>
                         <li><a href="/alunos/new">Cadastro</a> </li>
                         <li><a href="/alunos">Listagem</a> </li>
-                        <li><a href="/turma/dashboard">Turma</a> </li>
+                        <li><a href="/turmas">Turma</a> </li>
                         <li><a href="table.html">Page with Sidebar Example</a> </li>
                     </ul>
                 </li>

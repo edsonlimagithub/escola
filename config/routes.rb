@@ -13,7 +13,7 @@ Escola::Application.routes.draw do
   match '/financeiro/aluno_mensalidades/:id' => 'financeiro#aluno_mensalidades'
   match '/financeiro/gerar_mensalidades'     => 'financeiro#gerar_mensalidades'
   
-  match '/turma/dashboard'                   => 'turmas#dashboard'
+  match '/turma/dashboard/:partial'                   => 'turmas#dashboard'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,29 +1,42 @@
-<h1>Listing turmas</h1>
+<%= render 'menu'%>
+<div class='grid_10'>
+	<div class="box round">
+		<h2>Listing turmas</h2>
+		
+		<table class="data display datatable">
+		<thead>
+		  <tr>
+		    <th>Descricao</th>
+		    <th>Dt inicio</th>
+		    <th>Dt fim</th>
+		    <th>Limite alunos</th>
+		    <th></th>
+		    <th></th>
+		    <th></th>
+		  </tr>
+		</thead>
+		<tbody>
+		<% @turmas.each do |turma| %>
+		  <tr>
+		    <td><%= turma.descricao %></td>
+		    <td><%= turma.dt_inicio %></td>
+		    <td><%= turma.dt_fim %></td>
+		    <td><%= turma.limite_alunos %></td>
+		    <td><%= link_to 'Show', turma %></td>
+		    <td><%= link_to 'Edit', edit_turma_path(turma) %></td>
+		    <td><%= link_to 'Destroy', turma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		  </tr>
+		<% end %>
+		</tbody>
+		</table>
+	</div>
+</div>
+<script type="text/javascript">
+	
+		$('.datatable').dataTable();
+		setSidebarHeight();
+	
+	</script>
 
-<table>
-  <tr>
-    <th>Descricao</th>
-    <th>Dt inicio</th>
-    <th>Dt fim</th>
-    <th>Limite alunos</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @turmas.each do |turma| %>
-  <tr>
-    <td><%= turma.descricao %></td>
-    <td><%= turma.dt_inicio %></td>
-    <td><%= turma.dt_fim %></td>
-    <td><%= turma.limite_alunos %></td>
-    <td><%= link_to 'Show', turma %></td>
-    <td><%= link_to 'Edit', edit_turma_path(turma) %></td>
-    <td><%= link_to 'Destroy', turma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Turma', new_turma_path %>

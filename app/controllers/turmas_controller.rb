@@ -1,14 +1,9 @@
 class TurmasController < ApplicationController
-  
-  def dashboard
-    
-  end
 
   # GET /turmas
   # GET /turmas.json
   def index
     @turmas = Turma.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @turmas }
