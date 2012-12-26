@@ -1,4 +1,6 @@
 Escola::Application.routes.draw do
+  resources :turmas
+
   resources :alunos
 
   resources :roles
@@ -7,11 +9,11 @@ Escola::Application.routes.draw do
 
   devise_for :users, :path_prefix => 'my'
   resources :users
-
-  get "welcome/index"
   
   match '/financeiro/aluno_mensalidades/:id' => 'financeiro#aluno_mensalidades'
   match '/financeiro/gerar_mensalidades'     => 'financeiro#gerar_mensalidades'
+  
+  match '/turma/dashboard'                   => 'turmas#dashboard'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

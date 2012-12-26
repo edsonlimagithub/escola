@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  descricao: MyString
+  dt_inicio: 2012-12-26
+  dt_fim: 2012-12-26
+  limite_alunos: 1
+
+two:
+  descricao: MyString
+  dt_inicio: 2012-12-26
+  dt_fim: 2012-12-26
+  limite_alunos: 1

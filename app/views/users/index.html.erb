@@ -1,22 +1,40 @@
-<h1>Listing users</h1>
-
-<table>
-  <tr>
-    <th>Email</th>
-    <th>Username</th>
-  </tr>
-
-  <% @users.each do |user| %>
-    <tr>
-      <td><%= user.email %></td>
-      <td><%= user.username %></td>
-      <td><%= link_to 'Show', user %></td>
-      <td><%= link_to 'Edit', edit_user_path(user) %></td>
-      <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New user', new_user_path %>
+<script type="text/javascript">
+	
+	$(function(){
+		$('.datatable').dataTable({
+			"sPaginationType": "full_numbers"
+		});
+	});
+	
+</script>
+<div class="grid_10">
+	<div class="box round first grid">
+		<h2>Usuários</h2>
+		
+		<table class="data display datatable">
+			<thead>
+		  <tr>
+		    <th>Email</th>
+		    <th>Username</th>
+		    <th>Empresa</th>
+		    <th></th>
+		    <th></th>
+		    <th></th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <% @users.each do |user| %>
+		    <tr>
+		      <td><%= user.email %></td>
+		      <td><%= user.username %></td>
+		      <td><%= user.empresa.descricao %></td>
+		      <td><%= link_to 'Show', user %></td>
+		      <td><%= link_to 'Edit', edit_user_path(user) %></td>
+		      <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+		    </tr>
+		  <% end %>
+		  </tbody>
+		</table>
+		<%= link_to 'Novo Usuário', new_user_path %>
+	</div>
+</div>

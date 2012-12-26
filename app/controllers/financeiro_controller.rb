@@ -18,7 +18,6 @@ class FinanceiroController < ApplicationController
       gera_mensalidade params[:aluno_id], valor, data_vencimento 
       data_vencimento = data_vencimento + 1.month  
     end
-    #render :nothing => true
     redirect_to "/financeiro/aluno_mensalidades/#{params[:aluno_id]}"
   end
   

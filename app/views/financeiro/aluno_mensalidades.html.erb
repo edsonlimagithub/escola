@@ -1,10 +1,12 @@
 <script type="text/javascript">
 	$(function(){
+		
         $( "#data_vencimento" ).datepicker({
         	 dateFormat: "dd/mm/yy" });
 	
 		$('.datatable').dataTable({
 			"sPaginationType": "full_numbers"
+			
 		});
 		
 		$('#valor').priceFormat({
@@ -23,6 +25,14 @@
 	
 	var enviaFormGeraMensalidade = function(){
 		$("#formGeraMensalidade").submit();
+	}
+	
+	var marcarAbertas = function(){
+		alert("marcar abertas");
+	}
+	
+	var gerarCarnes = function(){
+		alert("gerar carnes");
 	}
 	
 </script>
@@ -65,7 +75,9 @@
 	                </td>
 	            </tr>
 	         </table>
-	         <button class="btn-icon btn-grey btn-plus" onclick="enviaFormGeraMensalidade();"><span></span>Gerar Mensalidade</button>
+	         <button type="button" class="btn-icon btn-grey" onclick="enviaFormGeraMensalidade();">Gerar Mensalidade</button>
+	         <button type="button" class="btn-icon btn-orange" onclick="marcarAbertas();">Marcar mensalidades abertas</button>
+	         <button type="button" class="btn-icon btn-red btn-plus" onclick="gerarCarnes();">Imprimir Carnês</button>
 	    </form>
 	    </div>
                     <table class="data display datatable" id="example">
@@ -85,9 +97,11 @@
 					<tbody>
 						<% @aluno.mensalidades.each do |mensalidade| %>
 						<tr class="odd gradeX">
-							<td><%= mensalidade.valor %></td>
 							<td>
-								<%= mensalidade.vencimento.strftime("%d/%m/%Y") %>
+								<%= number_to_currency(mensalidade.valor, :unit => "R$", :separator => ",", :delimiter => ".") %>
+							</td>
+							<td>
+								<%= mensalidade.vencimento %>
 							</td>
 							<td>juros</td>
 							<td>multa</td>

@@ -88,12 +88,14 @@
         <div class="clear">
         </div>
         <div class="grid_12">
-            <ul class="nav main">
+	        <% if user_signed_in? %>	
+	        
+	          <ul class="nav main">
                 <li class="ic-form-style"><a href="javascript:"><span>Alunos</span></a>
                     <ul>
                         <li><a href="/alunos/new">Cadastro</a> </li>
                         <li><a href="/alunos">Listagem</a> </li>
-                        <li><a href="form-controls.html">Full Page Example</a> </li>
+                        <li><a href="/turma/dashboard">Turma</a> </li>
                         <li><a href="table.html">Page with Sidebar Example</a> </li>
                     </ul>
                 </li>
@@ -108,6 +110,8 @@
                 </li>
                 <li class="ic-notifications"><a href="notifications.html"><span>Notifications</span></a></li>
             </ul>
+	        
+	        <% end %>
         </div>
         <div class="clear">
         </div>
