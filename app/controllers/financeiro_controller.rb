@@ -1,5 +1,13 @@
+#encoding: utf-8
+require 'rubygems'
+require 'prawn'
+require 'prawn/table' 
+require 'prawn/core'
+require 'prawn/security'
+require 'prawn/layout'
 class FinanceiroController < ApplicationController
-  before_filter :authenticate_user!
+  #before_filter :authenticate_user!
+  #load_and_authorize_resource
   include ValueFormat
   include ModFinanceiro
   
@@ -19,6 +27,39 @@ class FinanceiroController < ApplicationController
       data_vencimento = data_vencimento + 1.month  
     end
     redirect_to "/financeiro/aluno_mensalidades/#{params[:aluno_id]}"
+  end
+  
+  def gerar_boletos
+    mensalidade_ids =  params[:ids].split(",")
+    aluno = Aluno.find(params[:aluno_id])
+    mes = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+      
+    pdf  = Prawn::Document.new(:page_size => 'A4', :layout => 'portrait') do
+      font_size 10
+      mensalidade_ids.each do |mensalidade_id|
+        items = Array.new
+          mensalidade   = Mensalidade.find(mensalidade_id)
+          alunoNome     = "Aluno(a): #{aluno.nome}"
+          vencimentoRef = "Vencimento: #{mensalidade.vencimento.strftime("%d/%m/%Y")}  Ref: #{mes[mensalidade.vencimento.month - 1]}"
+          turmaTurno    = "Turma: #{aluno.turma.descricao} Turno: #{aluno.turma.turno}"
+          valorMulta    = "Valor: #{mensalidade.valor}    Multa:___________" 
+          totalPagoEm   = "Total:______________ Pago em ___/___/______" 
+          
+          items << ["Colégio Impacto","Colégio Impacto"]
+          items << [alunoNome,     alunoNome]
+          items << [vencimentoRef, vencimentoRef]
+          items << [turmaTurno, turmaTurno]
+          items << [valorMulta, valorMulta]
+          items << [totalPagoEm, totalPagoEm]
+                    
+          table items, :header => true,
+           :column_widths => { 0 => 250, 1 => 250},
+           :cell_style => { :borders => [:left, :right] }
+          move_down 10
+       end
+       
+    end  
+    send_data pdf.render, :filename => "mensalidades.pdf", :type => "application/pdf", :disposition => 'inline'
   end
   
 end

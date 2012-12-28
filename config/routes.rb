@@ -12,6 +12,7 @@ Escola::Application.routes.draw do
   
   match '/financeiro/aluno_mensalidades/:id' => 'financeiro#aluno_mensalidades'
   match '/financeiro/gerar_mensalidades'     => 'financeiro#gerar_mensalidades'
+  match '/financeiro/gerar_boletos'          => 'financeiro#gerar_boletos'
   
   match '/turma/dashboard/:partial'                   => 'turmas#dashboard'
 

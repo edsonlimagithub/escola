@@ -1,6 +1,7 @@
 class AlunosController < ApplicationController
   before_filter :authenticate_user!
-  # GET /alunos
+  load_and_authorize_resource
+
   # GET /alunos.json
   def index
     @alunos = Aluno.all
@@ -42,7 +43,7 @@ class AlunosController < ApplicationController
   # POST /alunos.json
   def create
     @aluno = Aluno.new(params[:aluno])
-
+    @aluno.empresa_id = current_user.empresa_id
     respond_to do |format|
       if @aluno.save
         format.html { redirect_to @aluno, notice: 'Aluno was successfully created.' }

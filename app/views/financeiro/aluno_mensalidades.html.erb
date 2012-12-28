@@ -28,11 +28,23 @@
 	}
 	
 	var marcarAbertas = function(){
-		alert("marcar abertas");
+		
+		
 	}
 	
 	var gerarCarnes = function(){
-		alert("gerar carnes");
+		var mensalidade_ids = new Array();
+		$("input:checked").each(function(i, e){
+			 mensalidade_ids.push(e.id);
+		 });
+		$("#ids").val( mensalidade_ids );
+		$("#formGeraBoletos").submit();
+		 // var mensalidade_ids = new Array();
+		 // authenticity_token = $("#authenticity_token").val();
+		 // $.post(
+			 // '/financeiro/gerar_boletos',
+			 // {mensalidade_ids:mensalidade_ids, authenticity_token:authenticity_token}
+		 // );	
 	}
 	
 </script>
@@ -79,7 +91,11 @@
 	         <button type="button" class="btn-icon btn-orange" onclick="marcarAbertas();">Marcar mensalidades abertas</button>
 	         <button type="button" class="btn-icon btn-red btn-plus" onclick="gerarCarnes();">Imprimir Carnês</button>
 	    </form>
-	    </div>
+	    <form action="/financeiro/gerar_boletos" method="post" id="formGeraBoletos">
+	    	<input name="authenticity_token" id="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
+	    	<input type="hidden" name="aluno_id" value="<%= @aluno.id %>" />
+	    	<input type="hidden" name="ids" value="1"  id="ids"/> 
+	    	</div>
                     <table class="data display datatable" id="example">
 					<thead>
 						<tr>
@@ -109,11 +125,12 @@
 							<td>total</td>
 							<td>dias vencidos</td>
 							<td><%= mensalidade.data_quitacao%></td>
-							<td><input type="checkbox" id="mensalidade_<%= mensalidade.id %>"/></td>
+							<td><input type="checkbox" id="<%= mensalidade.id %>"/></td>
 						</tr>
 						<% end %>
 	    		</tbody>
-	    	</table>
-	</div>
+	    		</table>
+	    	</form>
+		</div>
 </div>
 

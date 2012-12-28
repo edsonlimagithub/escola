@@ -1,5 +1,5 @@
 class TurmasController < ApplicationController
-
+  load_and_authorize_resource
   # GET /turmas
   # GET /turmas.json
   def index
@@ -41,7 +41,7 @@ class TurmasController < ApplicationController
   # POST /turmas.json
   def create
     @turma = Turma.new(params[:turma])
-
+    @turma.empresa_id = current_user.empresa_id
     respond_to do |format|
       if @turma.save
         format.html { redirect_to @turma, notice: 'Turma was successfully created.' }

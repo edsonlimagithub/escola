@@ -3,4 +3,5 @@ class Empresa < ActiveRecord::Base
   has_many :users
   has_many :alunos
   has_many :mensalidades
+  has_many :turmas
 end

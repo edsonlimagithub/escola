@@ -16,16 +16,16 @@
     <%= f.text_field :descricao %>
   </div>
   <div class="field">
-    <%= f.label :dt_inicio %><br />
-    <%= f.date_select :dt_inicio %>
+    <%= f.label 'Data Inicial' %><br />
+    <%= f.date_select :dt_inicio, :order => [:day, :month, :year] %>
   </div>
   <div class="field">
-    <%= f.label :dt_fim %><br />
-    <%= f.date_select :dt_fim %>
+    <%= f.label 'Data Final' %><br />
+    <%= f.date_select :dt_fim, :order => [:day, :month, :year] %>
   </div>
   <div class="field">
     <%= f.label :limite_alunos %><br />
-    <%= f.number_field :limite_alunos %>
+    <%= f.number_field :limite_alunos, :size => 3 %>
   </div>
   <div class="actions">
     <%= f.submit %>

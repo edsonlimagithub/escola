@@ -70,6 +70,10 @@
     <%= f.label :observacao %><br />
     <%= f.text_area :observacao %>
   </div>
+  <div>
+    <p>Turma</p>
+     <%= f.select :turma_id, Turma.all.collect {|turma| [turma.descricao, turma.id] }, {:prompt => 'Selecione uma Turma'} %>
+  </div>
   
   <div class="actions">
     <%= f.submit %>
