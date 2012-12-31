@@ -13,9 +13,9 @@ role :app, "50.116.36.53"                          # This may be the same as you
 role :db,  "50.116.36.53", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
-set :user, "root"
+set :user, "deployer"
 set :use_sudo, false
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
 
 
 # if you want to clean up old releases on each deploy uncomment this:
