@@ -3,7 +3,7 @@ class Aluno < ActiveRecord::Base
     :logradouro_numero, :matricula, :nome, :observacao, :sexo, :tipo_sanguineo, :uf, :dia_vencimento, :turma_id
   
   validates  :empresa_id, :presence => true
-  belongs_to :empresas
+  belongs_to :empresa
   belongs_to :turma
   has_many   :mensalidades 
 end

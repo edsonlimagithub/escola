@@ -1,3 +1,11 @@
+<script type="text/javascript">
+	$(function(){
+		$( "#aluno_data_nascimento" ).datepicker({
+			dateFormat: "dd/mm/yy"
+		});
+	});
+</script>
+
 <%= form_for(@aluno) do |f| %>
   <% if @aluno.errors.any? %>
     <div id="error_explanation">
@@ -10,72 +18,85 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :matricula %><br />
-    <%= f.number_field :matricula %>
-  </div>
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :data_nascimento %><br />
-    <%= f.date_select :data_nascimento %>
-  </div>
-  <div class="field">
-    <%= f.label :logradouro %><br />
-    <%= f.text_field :logradouro %>
-  </div>
-  <div class="field">
-    <%= f.label :logradouro_numero %><br />
-    <%= f.text_field :logradouro_numero %>
-  </div>
-  <div class="field">
-    <%= f.label :logradouro_complemento %><br />
-    <%= f.text_field :logradouro_complemento %>
-  </div>
-  <div class="field">
-    <%= f.label :bairro %><br />
-    <%= f.text_field :bairro %>
-  </div>
-  <div class="field">
-    <%= f.label :cidade %><br />
-    <%= f.text_field :cidade %>
-  </div>
+  <table class="form">
+  	<tr>
+  		<td>
+  			 <div class="field">
+  	  			<%= f.label :matricula %><br />
+    			<%= f.number_field :matricula %>
+  			</div>
+			  <div class="field">
+			    <%= f.label :nome %><br />
+			    <%= f.text_field :nome %>
+			  </div>
+			  <div class="field">
+			    <%= f.label :data_nascimento %><br />
+			    <%= f.text_field :data_nascimento %>
+			  </div>
+			  <div class="field">
+			    <%= f.label :logradouro %><br />
+			    <%= f.text_field :logradouro %>
+			  </div>
+			  <div class="field">
+			    <%= f.label :logradouro_numero %><br />
+			    <%= f.text_field :logradouro_numero %>
+			  </div>
+			  <div class="field">
+			    <%= f.label :logradouro_complemento %><br />
+			    <%= f.text_field :logradouro_complemento %>
+			  </div>
+			  <div class="field">
+			    <%= f.label :bairro %><br />
+			    <%= f.text_field :bairro %>
+			  </div>
+			  <div class="field">
+			    <%= f.label :cidade %><br />
+			    <%= f.text_field :cidade %>
+			  </div>
+			  <div>
+			    <%= f.label :uf %><br />
+			    <%= f.select :uf, ufList %>
+			  </div>
+			  <div class="field">
+			    <%= f.label :tipo_sanguineo %><br />
+			    <%= f.text_field :tipo_sanguineo %>
+			  </div>
+			  <div class="field">
+			    <%= f.label :dia_vencimento %><br />
+			    <%= f.text_field :dia_vencimento %>
+			  </div>
+	  </td>
+  		<td>
+ 			 <div class="field">
+		    <%= f.label :sexo %><br />
+		    <%= f.select :sexo, ["Masculino", "Feminino"] %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :fone %><br />
+		    <%= f.text_field :fone %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :fone2 %><br />
+		    <%= f.text_field :fone2 %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :observacao %><br />
+		    <%= f.text_area :observacao %>
+		  </div> 			
+  		</td>
+  	</tr>
+  	
+  </table>
+ 
+ 
   <div>
-    <%= f.label :uf %><br />
-    <%= f.text_field :uf %>
-  </div>
-  <div class="field">
-    <%= f.label :tipo_sanguineo %><br />
-    <%= f.text_field :tipo_sanguineo %>
-  </div>
-  <div class="field">
-    <%= f.label :dia_vencimento %><br />
-    <%= f.text_field :dia_vencimento %>
-  </div>
-  <div class="field">
-    <%= f.label :sexo %><br />
-    <%= f.text_field :sexo %>
-  </div>
-  <div class="field">
-    <%= f.label :fone %><br />
-    <%= f.text_field :fone %>
-  </div>
-  <div class="field">
-    <%= f.label :fone2 %><br />
-    <%= f.text_field :fone2 %>
-  </div>
-  <div class="field">
-    <%= f.label :observacao %><br />
-    <%= f.text_area :observacao %>
-  </div>
-  <div>
-    <p>Turma</p>
+    <p >Turma</p>
      <%= f.select :turma_id, Turma.all.collect {|turma| [turma.descricao, turma.id] }, {:prompt => 'Selecione uma Turma'} %>
   </div>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Gravar" %>
   </div>
 <% end %>
+
+
