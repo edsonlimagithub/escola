@@ -90,7 +90,7 @@
  
  
   <div>
-    <p >Turma</p>
+    <p>Turma</p>
      <%= f.select :turma_id, Turma.all.collect {|turma| [turma.descricao, turma.id] }, {:prompt => 'Selecione uma Turma'} %>
   </div>
   
