@@ -6,6 +6,8 @@ Escola::Application.routes.draw do
   resources :roles
 
   resources :empresas
+  
+  resources :mensalidades
 
   devise_for :users, :path_prefix => 'my'
   resources :users

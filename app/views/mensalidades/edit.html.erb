@@ -1,0 +1,10 @@
+<div class="grid_12">
+	<div class="box round first fullpage">
+	<h2><%= @mensalidade.aluno.nome %></h2>
+	
+	<%= render 'form' %>
+	
+	<%= link_to 'Show', @mensalidade %> |
+	<%= link_to 'voltar',"/financeiro/aluno_mensalidades/#{@mensalidade.aluno.id}" %>
+</div>
+</div>

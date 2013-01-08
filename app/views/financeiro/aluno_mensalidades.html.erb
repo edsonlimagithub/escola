@@ -107,6 +107,7 @@
 							<th>Total</th>
 							<th>Dias Vencidos</th>
 							<th>Quitação</th>
+							<th></th>
 							<th>Carnês</th>
 						</tr>
 					</thead>
@@ -125,6 +126,7 @@
 							<td>total</td>
 							<td>dias vencidos</td>
 							<td><%= mensalidade.data_quitacao%></td>
+							<td><%= link_to 'Editar', edit_mensalidade_path(mensalidade) %></td>
 							<td><input type="checkbox" id="<%= mensalidade.id %>"/></td>
 						</tr>
 						<% end %>

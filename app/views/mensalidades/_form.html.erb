@@ -1,0 +1,32 @@
+<script type="text/javascript">
+	$(function(){
+		$( "#mensalidade_vencimento" ).datepicker({
+        	 dateFormat: "dd/mm/yy" });
+	});
+</script>
+
+<%= form_for(@mensalidade) do |f| %>
+  <% if @mensalidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mensalidade.errors.count, "error") %> prohibited this empresa from being saved:</h2>
+
+      <ul>
+      <% @mensalidade.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :valor %><br />
+    <%= f.text_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label 'Data Vencimento' %><br />
+    <%= f.text_field :vencimento %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
