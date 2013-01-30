@@ -125,7 +125,7 @@
 							<td>desconto</td>
 							<td>total</td>
 							<td>dias vencidos</td>
-							<td><%= mensalidade.data_quitacao%></td>
+							<td><%= link_baixa mensalidade %></td>
 							<td><%= link_to 'Editar', edit_mensalidade_path(mensalidade) %></td>
 							<td><input type="checkbox" id="<%= mensalidade.id %>"/></td>
 						</tr>

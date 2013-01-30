@@ -9,4 +9,8 @@ module ApplicationHelper
     date_out
   end
   
+  def valor_br valor
+    valor =  number_to_currency(valor, :separator => ',', :precision => 2)
+  end
+  
 end

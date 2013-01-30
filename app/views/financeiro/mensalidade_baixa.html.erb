@@ -1,0 +1,77 @@
+<div class="grid_5">
+	<div class="box round">
+		<h2>Baixar Mensalidade: <%= @mensalidade.aluno.nome %></h2>
+		<form id="baixa_mensalidade" method="post" action="/financeiro/mensalidade_baixa_confirma">
+			<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/> 
+			<input type="hidden" name="mensalidade_id" value="<%= @mensalidade.id %>"/>
+			<table class="form">
+				<tr>
+					<td>		
+						<label>Vencimento</label>
+					</td>
+					<td>
+					<label><%= @mensalidade.vencimento.strftime("%d/%m/%Y")%></label>
+					</td>
+				</tr>
+				<tr>
+					<td>		
+						<label>Quitacao</label>
+					</td>
+					<td>
+					 <input type="text" id="data_quitacao" name="data_quitacao" value="<%= Time.now.strftime("%d/%m/%Y") %>"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Valor</label>
+					</td>
+					<td>
+						<input type="text" id="valor" name="valor" value="<%= valor_br @mensalidade.valor %>" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Multa</label>
+					</td>
+					<td>
+						<input type="text" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Juros</label>
+					</td>
+					<td>
+						<input type="text" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="Baixar" onclick="confirmaBaixa()" />		
+					</td>
+				</tr>
+				
+			</table>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$( "#data_quitacao" ).datepicker({
+			dateFormat: "dd/mm/yy"
+		});
+		
+		$('#valor').priceFormat({
+			prefix: 'R$ ',
+    		centsSeparator: ',',
+    		thousandsSeparator: '.'
+		});
+	});
+	
+	confirmaBaixa = function(){
+		decisao = confirm("Desejava realmente dar baixa nessa mensalidade?")
+		if(decisao){
+			$("#baixa_mensalidade").submit();			
+		}
+	}
+</script>

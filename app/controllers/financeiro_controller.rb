@@ -62,4 +62,21 @@ class FinanceiroController < ApplicationController
     send_data pdf.render, :filename => "mensalidades.pdf", :type => "application/pdf", :disposition => 'inline'
   end
   
+  def mensalidade_baixa
+    @mensalidade = Mensalidade.find(params[:id])
+  end
+  
+  def mensalidade_baixa_confirma
+    mensalidade = Mensalidade.find(params[:mensalidade_id])
+    valor = parsePriceToFloat params[:valor]
+    baixa = DateTime.parse(params[:data_quitacao]).to_s(:db)
+    begin
+      mensalidade.data_quitacao = baixa
+      mensalidade.save
+    rescue
+      
+    end  
+    redirect_to "/financeiro/aluno_mensalidades/#{mensalidade.aluno.id}"
+  end
+  
 end

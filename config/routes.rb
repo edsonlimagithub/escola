@@ -12,9 +12,11 @@ Escola::Application.routes.draw do
   devise_for :users, :path_prefix => 'my'
   resources :users
   
-  match '/financeiro/aluno_mensalidades/:id' => 'financeiro#aluno_mensalidades'
-  match '/financeiro/gerar_mensalidades'     => 'financeiro#gerar_mensalidades'
-  match '/financeiro/gerar_boletos'          => 'financeiro#gerar_boletos'
+  match '/financeiro/aluno_mensalidades/:id'     => 'financeiro#aluno_mensalidades'
+  match '/financeiro/gerar_mensalidades'         => 'financeiro#gerar_mensalidades'
+  match '/financeiro/gerar_boletos'              => 'financeiro#gerar_boletos'
+  match '/financeiro/mensalidade_baixa/:id'      => 'financeiro#mensalidade_baixa'
+  match '/financeiro/mensalidade_baixa_confirma' => 'financeiro#mensalidade_baixa_confirma'
   
   match '/turma/dashboard/:partial'                   => 'turmas#dashboard'
 
