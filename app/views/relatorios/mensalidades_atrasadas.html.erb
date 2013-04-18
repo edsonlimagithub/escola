@@ -1,0 +1,30 @@
+<%= render 'menu' %>
+<div class='grid_10'>
+	<div class="box round">
+		<h2>Mensalidades Atrasadas</h2>
+		<table class="data display datatable" >
+		<thead>
+		  <tr>
+		  	<th>Aluno</th>
+		    <th>Vencimento</th>
+		    <th>Dias de atraso</th>
+		  </tr>
+		</thead>
+		<tbody>
+		<% @mensalidades.each do |mensalidade| %>
+		  <tr>
+		  	<td><%= mensalidade.aluno.nome %></td>
+		    <td><%= mensalidade.vencimento %></td>
+		    <td>Dias de atraso</td>
+		  </tr>
+		<% end %>
+		</tbody>
+		</table>
+	</div>
+</div>
+<script type="text/javascript">
+	
+	$('.datatable').dataTable();
+	setSidebarHeight();
+	
+</script>

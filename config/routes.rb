@@ -22,6 +22,9 @@ Escola::Application.routes.draw do
   
   match '/utilitarios/recibo_avulso'             => 'utilitarios#recibo_avulso'
   match '/utilitarios/recibo_avulso_submit'      => 'utilitarios#recibo_avulso_submit'
+  
+  #filtro para mensalides vencidas
+  match '/relatorio/mensalidades_atrasadas'        => 'relatorios#mensalidades_atrasadas'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
