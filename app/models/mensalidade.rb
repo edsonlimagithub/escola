@@ -7,4 +7,8 @@ class Mensalidade < ActiveRecord::Base
   
   validates :empresa_id, :presence => true
   
+  def diasAtraso
+    (self.vencimento - DateTime.now.to_date).round
+  end
+  
 end

@@ -13,9 +13,9 @@
 		<tbody>
 		<% @mensalidades.each do |mensalidade| %>
 		  <tr>
-		  	<td><%= mensalidade.aluno.nome %></td>
+		  	<td><%= link_to mensalidade.aluno.nome, "/alunos/#{mensalidade.aluno.id}" %></td>
 		    <td><%= mensalidade.vencimento %></td>
-		    <td>Dias de atraso</td>
+		    <td><%= mensalidade.diasAtraso %></td>
 		  </tr>
 		<% end %>
 		</tbody>
