@@ -15,5 +15,7 @@ roleUsuario.save
 empresaPadrao = Empresa.new(:descricao => 'padrao')
 empresaPadrao.save
 
-User.create([{username: 'edsonlima'}, {email: 'edson-lima@outlook.com'}, {password: '217845'}, {empresa_id: empresaPadrao.id}])
+user = User.new({:username =>  'edsonlima', :email => 'edson-lima@outlook.com', 
+	:password => '217845', :empresa_id => empresaPadrao.id})
+user.save
 
