@@ -5,7 +5,7 @@
     </h2>
     <div class="block">
 
-		<table class="data display datatable">
+		<table class="data display datatable" id='tabela'>
 			<thead>
 		  <tr>
 		    <th>Matricula</th>
@@ -28,27 +28,27 @@
 		  </tr>
 		</thead>
 		<tbody>
-		<% @alunos.each do |aluno| %>
-		  <tr>
-		    <td><%= aluno.matricula %></td>
-		    <td><%= aluno.nome %></td>
-		    <td><%= aluno.data_nascimento %></td>
-		    <td><%= aluno.logradouro %></td>
-		    <td><%= aluno.logradouro_numero %></td>
-		    <td><%= aluno.logradouro_complemento %></td>
-		    <td><%= aluno.bairro %></td>
-		    <td><%= aluno.cidade %></td>
-		    <td><%= aluno.uf %></td>
-		    <td><%= aluno.tipo_sanguineo %></td>
-		    <td><%= aluno.sexo %></td>
-		    <td><%= aluno.fone %></td>
-		    <td><%= aluno.fone2 %></td>
-		    <td><%= link_to 'Show', aluno %></td>
-		    <td><%= link_to 'Edit', edit_aluno_path(aluno) %></td>
-		    <td><%= link_to 'Destroy', aluno, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-		    <td><%= link_to 'Financeiro', "/financeiro/aluno_mensalidades/#{aluno.id}" %></td>
-		  </tr>
-		<% end %>
+			<% @alunos.each do |aluno| %>
+			  <tr>
+			    <td><%= aluno.matricula %></td>
+			    <td><%= aluno.nome %></td>
+			    <td><%= aluno.data_nascimento %></td>
+			    <td><%= aluno.logradouro %></td>
+			    <td><%= aluno.logradouro_numero %></td>
+			    <td><%= aluno.logradouro_complemento %></td>
+			    <td><%= aluno.bairro %></td>
+			    <td><%= aluno.cidade %></td>
+			    <td><%= aluno.uf %></td>
+			    <td><%= aluno.tipo_sanguineo %></td>
+			    <td><%= aluno.sexo %></td>
+			    <td><%= aluno.fone %></td>
+			    <td><%= aluno.fone2 %></td>
+			    <td><%= link_to 'Show', aluno %></td>
+			    <td><%= link_to 'Edit', edit_aluno_path(aluno) %></td>
+			    <td><%= link_to 'Destroy', aluno, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			    <td><%= link_to 'Financeiro', "/financeiro/aluno_mensalidades/#{aluno.id}" %></td>
+			  </tr>
+			<% end %>
 		</tbody>
 		</table>
 		
@@ -60,7 +60,9 @@
 </div>
 <script type="text/javascript">
 	
-	$('.datatable').dataTable();
+	tabela = $('#tabela').dataTable({
+		"sPaginationType": "full_numbers"
+	});
 	setSidebarHeight();
 	
 </script>
