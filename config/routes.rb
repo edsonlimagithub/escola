@@ -24,10 +24,10 @@ Escola::Application.routes.draw do
   match '/utilitarios/recibo_avulso_submit'      => 'utilitarios#recibo_avulso_submit'
   
 
-  #filtro para mensalides vencidas
-  match '/relatorio/mensalidades_atrasadas_filtro' => 'relatorios#mensalidades_atrasadas_filtro'
-  #mensalidades vencidas
-  match '/relatorio/mensalidades_atrasadas'        => 'relatorios#mensalidades_atrasadas'
+  #filtro para mensalides
+  match '/relatorio/mensalidades_filtro' => 'relatorios#mensalidades_filtro'
+  #mensalidades
+  match '/relatorio/mensalidades'        => 'relatorios#mensalidades'
   
 
   root :to => 'welcome#index'

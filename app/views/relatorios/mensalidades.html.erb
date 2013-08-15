@@ -8,6 +8,7 @@
 		  	<th>Aluno</th>
 		  	<th>Turma</th>
 		    <th>Vencimento</th>
+		    <th>Quitação</th>
 		    <th>Dias de atraso</th>
 		  </tr>
 		</thead>
@@ -17,7 +18,8 @@
 		  	<td><%= link_to mensalidade.aluno.nome, "/alunos/#{mensalidade.aluno.id}" %></td>
 		  	<td><%= mensalidade.aluno.turma.descricao %></td>
 		    <td><%= mensalidade.vencimento.strftime("%d/%m/%Y") %></td>
-		    <td><%= mensalidade.diasAtraso %></td>
+		    <td><%= mensalidade.data_quitacao ? mensalidade.data_quitacao.strftime("%d/%m/%Y") : '' %></td>
+		    <td><%= mensalidade.data_quitacao ? "" : mensalidade.diasAtraso  %></td>
 		  </tr>
 		<% end %>
 		</tbody>
