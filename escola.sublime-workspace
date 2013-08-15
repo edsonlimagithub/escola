@@ -79,7 +79,7 @@
 			"file": "app/views/relatorios/mensalidades_atrasadas.html.erb",
 			"settings":
 			{
-				"buffer_size": 656,
+				"buffer_size": 696,
 				"line_ending": "Unix"
 			}
 		},
@@ -88,6 +88,30 @@
 			"settings":
 			{
 				"buffer_size": 753,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/alunos/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 1714,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 2760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/welcome/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 75,
 				"line_ending": "Unix"
 			}
 		}
@@ -243,7 +267,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -279,15 +303,15 @@
 					"file": "app/views/relatorios/mensalidades_atrasadas.html.erb",
 					"settings":
 					{
-						"buffer_size": 656,
+						"buffer_size": 696,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								657,
+								657
 							]
 						],
 						"settings":
@@ -313,14 +337,95 @@
 						"selection":
 						[
 							[
-								284,
-								284
+								733,
+								733
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/alunos/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 1714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1675,
+								1675
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 459.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 2760,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								209,
+								209
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 663.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/welcome/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 75,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -376,6 +481,22 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"welcome/",
+				"app/views/welcome/index.html.erb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"mensalida",
+				"app/views/relatorios/mensalidades_atrasadas.html.erb"
+			],
+			[
+				"index",
+				"app/views/alunos/index.html.erb"
+			],
 			[
 				"menu",
 				"app/views/relatorios/_menu.html.erb"

@@ -4,7 +4,7 @@ class Turma < ActiveRecord::Base
   
   validates :empresa_id, :presence => true
   
-  belongs_to :empresas
+  belongs_to :empresa
   has_many :alunos
   
 end
