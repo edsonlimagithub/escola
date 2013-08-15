@@ -26,6 +26,15 @@
 		   <tr>
 		  	<th>Pagas</th><td><%= check_box_tag 'quitadas', true, true %></td>
 		  </tr>
+		  <tr>
+		  	<th></br>Formato de saída</th>
+		  </tr>
+		  <tr>
+		  	<th>Video</th><td><%= radio_button_tag 'formato', 'video', true %></td>
+		  </tr>
+		  <tr>
+		  	<th>Pdf</th><td><%= radio_button_tag 'formato', 'pdf' %></td>
+		  </tr>
 		</table>
 		<%= submit_tag 'Confirmar'%>
 		<% end %>
