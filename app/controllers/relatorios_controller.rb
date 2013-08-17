@@ -55,7 +55,7 @@ class RelatoriosController < ApplicationController
       	total = total + mensalidade.valor
       	items << [
       		mensalidade.aluno.nome,
-      		mensalidade.aluno.turma.descricao,
+      		mensalidade.aluno.turma ? mensalidade.aluno.turma.descricao : "",
       		mensalidade.vencimento.strftime("%d/%m/%Y"),
       		mensalidade.data_quitacao ? mensalidade.data_quitacao.strftime("%d/%m/%Y") : "",
       		mensalidade.data_quitacao ? "" : mensalidade.diasAtraso,

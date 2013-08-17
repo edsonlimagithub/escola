@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"data",
+				"data_quitacao"
+			],
+			[
+				"mensali",
+				"mensalidades"
+			],
+			[
+				"turma",
+				"turma_id"
+			],
+			[
+				"mensalidades",
+				"mensalidades_filtro"
+			],
+			[
 				"dateC",
 				"dateConvert"
 			],
@@ -76,10 +92,10 @@
 			}
 		},
 		{
-			"file": "app/views/relatorios/mensalidades_atrasadas.html.erb",
+			"file": "app/views/relatorios/mensalidades.html.erb",
 			"settings":
 			{
-				"buffer_size": 792,
+				"buffer_size": 952,
 				"line_ending": "Unix"
 			}
 		},
@@ -87,26 +103,23 @@
 			"file": "app/views/relatorios/_menu.html.erb",
 			"settings":
 			{
-				"buffer_size": 760,
+				"buffer_size": 750,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "class RelatoriosController < ApplicationController\n  def mensalidades_atrasadas_filtro\n  	@turmas = current_user.empresa.turmas\n\n  end\n\n  def mensalidades_atrasadas\n    hoje = Time.now.strftime(\"%Y-%m-%d\")\n    @mensalidades = Mensalidade.find(:all, :conditions => [\"vencimento < '#{hoje}' and data_quitacao is null\"]).\n    abort @mensalidades\n  end\nend\n",
 			"file": "app/controllers/relatorios_controller.rb",
-			"file_size": 358,
-			"file_write_time": 1376520568000000,
 			"settings":
 			{
-				"buffer_size": 353,
+				"buffer_size": 2208,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/relatorios/mensalidades_atrasadas_filtro.html.erb",
+			"file": "app/views/relatorios/mensalidades_filtro.html.erb",
 			"settings":
 			{
-				"buffer_size": 458,
+				"buffer_size": 1222,
 				"line_ending": "Unix"
 			}
 		},
@@ -131,6 +144,22 @@
 			"settings":
 			{
 				"buffer_size": 392,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/alunos/_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 2542,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/utilitarios_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1203,
 				"line_ending": "Unix"
 			}
 		}
@@ -207,13 +236,14 @@
 	},
 	"file_history":
 	[
-		"/home/edsonlima/projetos/escola/app/views/alunos/index.html.erb",
 		"/home/edsonlima/projetos/escola/app/controllers/mensalidades_controller.rb",
-		"/home/edsonlima/projetos/escola/config/routes.rb",
-		"/home/edsonlima/projetos/escola/app/views/financeiro/aluno_mensalidades.html.erb",
-		"/home/edsonlima/projetos/escola/app/views/layouts/application.html.erb",
-		"/home/edsonlima/projetos/escola/app/views/welcome/index.html.erb",
 		"/home/edsonlima/projetos/escola/app/views/relatorios/mensalidades_atrasadas_filtro.html.erb",
+		"/home/edsonlima/projetos/escola/app/views/relatorios/mensalidades_atrasadas.html.erb",
+		"/home/edsonlima/projetos/escola/config/routes.rb",
+		"/home/edsonlima/projetos/escola/app/views/layouts/application.html.erb",
+		"/home/edsonlima/projetos/escola/app/views/alunos/index.html.erb",
+		"/home/edsonlima/projetos/escola/app/views/financeiro/aluno_mensalidades.html.erb",
+		"/home/edsonlima/projetos/escola/app/views/welcome/index.html.erb",
 		"/home/edsonlima/projetos/escola/app/views/devise/sessions/new.html.erb",
 		"/home/edsonlima/projetos/escola/db/seeds.rb",
 		"/home/edsonlima/projetos/dsmmanager/lib/funcoes_data/date_convert.rb",
@@ -264,6 +294,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"aluno",
 			"data",
 			"pedido",
 			"produto",
@@ -328,18 +359,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/relatorios/mensalidades_atrasadas.html.erb",
+					"file": "app/views/relatorios/mensalidades.html.erb",
 					"settings":
 					{
-						"buffer_size": 792,
+						"buffer_size": 952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								443,
-								443
+								720,
+								720
 							]
 						],
 						"settings":
@@ -358,15 +389,15 @@
 					"file": "app/views/relatorios/_menu.html.erb",
 					"settings":
 					{
-						"buffer_size": 760,
+						"buffer_size": 750,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								291,
-								291
+								274,
+								274
 							]
 						],
 						"settings":
@@ -385,41 +416,43 @@
 					"file": "app/controllers/relatorios_controller.rb",
 					"settings":
 					{
-						"buffer_size": 353,
+						"buffer_size": 2208,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								342,
-								342
+								1378,
+								1378
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 612.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "app/views/relatorios/mensalidades_atrasadas_filtro.html.erb",
+					"file": "app/views/relatorios/mensalidades_filtro.html.erb",
 					"settings":
 					{
-						"buffer_size": 458,
+						"buffer_size": 1222,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								383,
-								383
+								788,
+								788
 							]
 						],
 						"settings":
@@ -428,7 +461,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 128.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -510,6 +543,60 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/alunos/_form.html.erb",
+					"settings":
+					{
+						"buffer_size": 2542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								128,
+								128
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/controllers/utilitarios_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1203,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143,
+								143
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		}
@@ -560,6 +647,30 @@
 		"selected_items":
 		[
 			[
+				"utili",
+				"app/controllers/utilitarios_controller.rb"
+			],
+			[
+				"mensali",
+				"app/controllers/mensalidades_controller.rb"
+			],
+			[
+				"carne",
+				"app/controllers/utilitarios_controller.rb"
+			],
+			[
+				"alunos/_fo",
+				"app/views/alunos/_form.html.erb"
+			],
+			[
+				"appli",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
 				"turma",
 				"app/models/turma.rb"
 			],
@@ -578,10 +689,6 @@
 			[
 				"mensa",
 				"app/views/relatorios/mensalidades_atrasadas_filtro.html.erb"
-			],
-			[
-				"mensali",
-				"app/views/relatorios/mensalidades_atrasadas.html.erb"
 			],
 			[
 				"relatorio",
@@ -638,10 +745,6 @@
 			[
 				"rout",
 				"config/routes.rb"
-			],
-			[
-				"appli",
-				"app/views/layouts/application_new.html.erb"
 			],
 			[
 				"produt",
