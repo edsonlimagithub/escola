@@ -87,9 +87,9 @@
 	                </td>
 	            </tr>
 	         </table>
-	         <button type="button" class="btn-icon btn-grey" onclick="enviaFormGeraMensalidade();">Gerar Mensalidade</button>
-	         <button type="button" class="btn-icon btn-orange" onclick="marcarAbertas();">Marcar mensalidades abertas</button>
-	         <button type="button" class="btn-icon btn-red btn-plus" onclick="gerarCarnes();">Imprimir Carnês</button>
+	         <button type="button" class="btn btn-grey" onclick="enviaFormGeraMensalidade();">Gerar Mensalidade</button>
+	         <button type="button" class="btn btn-orange" onclick="marcarAbertas();">Marcar mensalidades abertas</button>
+	         <button type="button" class="btn btn-red btn-plus" onclick="gerarCarnes();">Imprimir Carnês</button>
 	    </form>
 	    <form action="/financeiro/gerar_boletos" method="post" id="formGeraBoletos">
 	    	<input name="authenticity_token" id="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
@@ -106,8 +106,10 @@
 							<th>Desconto</th>
 							<th>Total</th>
 							<th>Dias Vencidos</th>
-							<th>Quitação</th>
-							<th></th>
+							<th>
+								Ações
+							</th>
+							
 							<th>Carnês</th>
 						</tr>
 					</thead>
@@ -125,8 +127,12 @@
 							<td>desconto</td>
 							<td>total</td>
 							<td>dias vencidos</td>
-							<td><%= link_baixa mensalidade %></td>
-							<td><%= link_to 'Editar', edit_mensalidade_path(mensalidade) %></td>
+							<td>
+								<%= link_baixa mensalidade %>
+								<%= link_to 'Editar', edit_mensalidade_path(mensalidade) %>
+								<%= link_to 'Destroy', mensalidade, :class => "btn btn-red",method: :delete, data: { confirm: "Apagar essa mensalidade?" } %>
+							</td>
+
 							<td><input type="checkbox" id="<%= mensalidade.id %>"/></td>
 						</tr>
 						<% end %>

@@ -10,21 +10,21 @@
 		    <th>Dt inicio</th>
 		    <th>Dt fim</th>
 		    <th>Limite alunos</th>
-		    <th></th>
-		    <th></th>
-		    <th></th>
+		    <th>Ações</th>
 		  </tr>
 		</thead>
 		<tbody>
 		<% @turmas.each do |turma| %>
 		  <tr>
 		    <td><%= turma.descricao %></td>
-		    <td><%= turma.dt_inicio %></td>
-		    <td><%= turma.dt_fim %></td>
+		    <td><%= turma.dt_inicio.strftime("%d/%m/%Y") %></td>
+		    <td><%= turma.dt_fim.strftime("%d/%m/%Y") %></td>
 		    <td><%= turma.limite_alunos %></td>
-		    <td><%= link_to 'Show', turma %></td>
-		    <td><%= link_to 'Edit', edit_turma_path(turma) %></td>
-		    <td><%= link_to 'Destroy', turma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		    <td>
+		    	<%= link_to 'Show', turma, :class => "btn btn-blue" %>
+		    	<%= link_to 'Edit', edit_turma_path(turma), :class => "btn btn-yellow" %>
+		    	<%= link_to 'Destroy', turma, :class => "btn btn-red",method: :delete, data: { confirm: "Apagar registro de #{turma.descricao}?" } %>
+		    </td>
 		  </tr>
 		<% end %>
 		</tbody>

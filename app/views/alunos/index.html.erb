@@ -3,6 +3,8 @@
     <h2>
         Lista de alunos
     </h2>
+	</br>
+    <%= link_to 'Novo Aluno', new_aluno_path, :class => "btn btn-green" %>
     <div class="block">
 
 		<table class="data display datatable" id='tabela'>
@@ -14,10 +16,7 @@
 		    <th>Turma</th>
 		    <th>Fone</th>
 		    <th>Fone2</th>
-		    <th></th>
-		    <th></th>
-		    <th></th>
-		    <th></th>
+		    <th>Ações</th>
 		  </tr>
 		</thead>
 		<tbody>
@@ -29,10 +28,12 @@
 			    <td><%= aluno.turma ? aluno.turma.descricao : "vazio" %></td>
 			    <td><%= aluno.fone %></td>
 			    <td><%= aluno.fone2 %></td>
-			    <td><%= link_to 'Show', aluno %></td>
-			    <td><%= link_to 'Edit', edit_aluno_path(aluno) %></td>
-			    <td><%= link_to 'Destroy', aluno, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-			    <td><%= link_to 'Financeiro', "/financeiro/aluno_mensalidades/#{aluno.id}" %></td>
+			    <td>
+			    	<%= link_to 'Exibir', aluno, :class => "btn btn-blue" %>
+			    	<%= link_to 'Alterar', edit_aluno_path(aluno), :class => "btn btn-yellow" %>
+			    	<%= link_to 'Apagar', aluno, :class => "btn btn-red ",method: :delete, data: { confirm: "Apagar registro de #{aluno.nome}?" } %>
+			    	<%= link_to 'Financeiro', "/financeiro/aluno_mensalidades/#{aluno.id}", :class => "btn btn-orange" %>
+			    </td>
 			  </tr>
 			<% end %>
 		</tbody>
@@ -40,7 +41,7 @@
 		
 		<br />
 		
-		<%= link_to 'New Aluno', new_aluno_path %>
+		
 	</div>
 	</div>
 </div>

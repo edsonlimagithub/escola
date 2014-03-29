@@ -1,4 +1,6 @@
 class MensalidadesController < ApplicationController
+  skip_before_filter :verify_authenticity_token
+
   def edit
     @mensalidade = Mensalidade.find(params[:id])
   end
@@ -13,6 +15,17 @@ class MensalidadesController < ApplicationController
         format.html { render action: "edit" }
         format.json { render json: @mensalidade.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def destroy
+    @mensalidade = Mensalidade.find(params[:id])
+    aluno = @mensalidade.aluno
+    @mensalidade.destroy
+
+    respond_to do |format|
+      format.html { redirect_to "/financeiro/aluno_mensalidades/#{aluno.id}" }
+      format.json { head :no_content }
     end
   end
   

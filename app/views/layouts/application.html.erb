@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag "grid",   :media => "screen" %>
     <%= stylesheet_link_tag "layout", :media => "screen" %>
     <%= stylesheet_link_tag "nav",    :media => "screen" %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
     <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
     <%= stylesheet_link_tag "fancy-button/fancy-button" %>
@@ -17,6 +18,7 @@
     <%= stylesheet_link_tag "themes/base/jquery.ui.all" %>
     
     <!-- BEGIN: load jquery -->
+   <%= javascript_include_tag "application" %> 
     <%= javascript_include_tag "jquery-1.6.4.min" %>
     <%= javascript_include_tag "jquery-ui/jquery.ui.core.min" %>
     <%= javascript_include_tag "jquery-ui/jquery.ui.accordion.min" %>

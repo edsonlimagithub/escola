@@ -5,7 +5,7 @@
 		[
 			[
 				"data",
-				"data_quitacao"
+				"data_nascimento"
 			],
 			[
 				"mensali",
@@ -84,82 +84,26 @@
 	"buffers":
 	[
 		{
-			"file": "public/404.html",
+			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 728,
+				"buffer_size": 5413,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/relatorios/mensalidades.html.erb",
+			"file": "app/views/alunos/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 952,
+				"buffer_size": 1346,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/relatorios/_menu.html.erb",
+			"file": "app/assets/javascripts/application.js",
 			"settings":
 			{
-				"buffer_size": 750,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/relatorios_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2208,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/relatorios/mensalidades_filtro.html.erb",
-			"settings":
-			{
-				"buffer_size": 1222,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/turma.rb",
-			"settings":
-			{
-				"buffer_size": 212,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/mensalidade.rb",
-			"settings":
-			{
-				"buffer_size": 276,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/aluno.rb",
-			"settings":
-			{
-				"buffer_size": 392,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/alunos/_form.html.erb",
-			"settings":
-			{
-				"buffer_size": 2542,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/utilitarios_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1203,
+				"buffer_size": 641,
 				"line_ending": "Unix"
 			}
 		}
@@ -236,12 +180,28 @@
 	},
 	"file_history":
 	[
+		"/home/edsonlima/projetos/escola/Gemfile",
+		"/home/edsonlima/projetos/escola/config/environments/development.rb",
+		"/home/edsonlima/projetos/escola/config/environment.rb",
+		"/home/edsonlima/projetos/escola/app/assets/javascripts/tiny-mce/plugins/advhr/editor_plugin.js",
+		"/home/edsonlima/projetos/escola/app/models/mensalidade.rb",
+		"/home/edsonlima/projetos/escola/app/views/relatorios/mensalidades.html.erb",
+		"/home/edsonlima/projetos/escola/app/views/relatorios/_menu.html.erb",
+		"/home/edsonlima/projetos/escola/app/controllers/relatorios_controller.rb",
+		"/home/edsonlima/projetos/escola/app/views/relatorios/mensalidades_filtro.html.erb",
+		"/home/edsonlima/projetos/escola/app/models/turma.rb",
+		"/home/edsonlima/projetos/escola/app/models/aluno.rb",
+		"/home/edsonlima/projetos/escola/app/views/alunos/_form.html.erb",
+		"/home/edsonlima/projetos/escola/app/controllers/utilitarios_controller.rb",
+		"/home/edsonlima/projetos/escola/app/controllers/application_controller.rb",
+		"/home/edsonlima/projetos/escola/app/views/alunos/index.html.erb",
 		"/home/edsonlima/projetos/escola/app/controllers/mensalidades_controller.rb",
+		"/home/edsonlima/projetos/escola/config/database.yml",
+		"/home/edsonlima/projetos/escola/public/404.html",
 		"/home/edsonlima/projetos/escola/app/views/relatorios/mensalidades_atrasadas_filtro.html.erb",
 		"/home/edsonlima/projetos/escola/app/views/relatorios/mensalidades_atrasadas.html.erb",
 		"/home/edsonlima/projetos/escola/config/routes.rb",
 		"/home/edsonlima/projetos/escola/app/views/layouts/application.html.erb",
-		"/home/edsonlima/projetos/escola/app/views/alunos/index.html.erb",
 		"/home/edsonlima/projetos/escola/app/views/financeiro/aluno_mensalidades.html.erb",
 		"/home/edsonlima/projetos/escola/app/views/welcome/index.html.erb",
 		"/home/edsonlima/projetos/escola/app/views/devise/sessions/new.html.erb",
@@ -294,6 +254,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"//",
+			"applica",
 			"aluno",
 			"data",
 			"pedido",
@@ -326,51 +288,51 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/404.html",
+					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 728,
+						"buffer_size": 5413,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1128,
+								1128
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 51.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/relatorios/mensalidades.html.erb",
+					"file": "app/views/alunos/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 952,
+						"buffer_size": 1346,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								720,
-								720
+								939,
+								939
 							]
 						],
 						"settings":
@@ -386,211 +348,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/relatorios/_menu.html.erb",
+					"file": "app/assets/javascripts/application.js",
 					"settings":
 					{
-						"buffer_size": 750,
+						"buffer_size": 641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								274,
-								274
+								640,
+								640
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/controllers/relatorios_controller.rb",
-					"settings":
-					{
-						"buffer_size": 2208,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1378,
-								1378
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 612.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/relatorios/mensalidades_filtro.html.erb",
-					"settings":
-					{
-						"buffer_size": 1222,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								788,
-								788
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 128.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/models/turma.rb",
-					"settings":
-					{
-						"buffer_size": 212,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								204
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/models/mensalidade.rb",
-					"settings":
-					{
-						"buffer_size": 276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								122,
-								122
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/models/aluno.rb",
-					"settings":
-					{
-						"buffer_size": 392,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								352,
-								352
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/views/alunos/_form.html.erb",
-					"settings":
-					{
-						"buffer_size": 2542,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								128,
-								128
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/controllers/utilitarios_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1203,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								143,
-								143
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -647,12 +421,64 @@
 		"selected_items":
 		[
 			[
-				"utili",
-				"app/controllers/utilitarios_controller.rb"
+				"alunos/in",
+				"app/views/alunos/index.html.erb"
+			],
+			[
+				"editor",
+				"app/assets/javascripts/tiny-mce/plugins/advhr/editor_plugin.js"
+			],
+			[
+				"envi",
+				"config/environment.rb"
+			],
+			[
+				"deve",
+				"config/environments/development.rb"
+			],
+			[
+				"applica",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"gemfi",
+				"Gemfile"
+			],
+			[
+				"alunos/inde",
+				"app/views/alunos/index.html.erb"
+			],
+			[
+				"appli",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"data",
+				"config/database.yml"
+			],
+			[
+				"relatorio",
+				"app/controllers/relatorios_controller.rb"
+			],
+			[
+				"mensalida",
+				"app/controllers/mensalidades_controller.rb"
 			],
 			[
 				"mensali",
-				"app/controllers/mensalidades_controller.rb"
+				"app/views/relatorios/mensalidades.html.erb"
+			],
+			[
+				"app",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"utili",
+				"app/controllers/utilitarios_controller.rb"
 			],
 			[
 				"carne",
@@ -661,10 +487,6 @@
 			[
 				"alunos/_fo",
 				"app/views/alunos/_form.html.erb"
-			],
-			[
-				"appli",
-				"app/views/layouts/application.html.erb"
 			],
 			[
 				"rou",
@@ -679,10 +501,6 @@
 				"app/models/aluno.rb"
 			],
 			[
-				"mensalida",
-				"app/models/mensalidade.rb"
-			],
-			[
 				"turm",
 				"app/models/turma.rb"
 			],
@@ -691,20 +509,12 @@
 				"app/views/relatorios/mensalidades_atrasadas_filtro.html.erb"
 			],
 			[
-				"relatorio",
-				"app/controllers/relatorios_controller.rb"
-			],
-			[
 				"mensalidades",
 				"app/views/relatorios/mensalidades_atrasadas.html.erb"
 			],
 			[
 				"aluno_mensa",
 				"app/views/financeiro/aluno_mensalidades.html.erb"
-			],
-			[
-				"app",
-				"app/views/layouts/application.html.erb"
 			],
 			[
 				"welcome/",
@@ -773,10 +583,6 @@
 			[
 				"atuali",
 				"app/controllers/atualizacao_aspixes_controller.rb"
-			],
-			[
-				"envi",
-				"config/environment.rb"
 			],
 			[
 				"see",

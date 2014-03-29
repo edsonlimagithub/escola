@@ -27,8 +27,8 @@ group :assets do
 end
 
 group :development do 
-	gem "brakeman", "~> 1.9.5"
-	gem 'better_errors'
+	#gem "brakeman", "~> 1.9.5"
+	#gem 'better_errors'
 end
 
 gem 'jquery-rails'
