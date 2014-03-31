@@ -83,30 +83,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/views/layouts/application.html.erb",
-			"settings":
-			{
-				"buffer_size": 5413,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/alunos/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 1346,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/application.js",
-			"settings":
-			{
-				"buffer_size": 641,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
@@ -180,6 +156,16 @@
 	},
 	"file_history":
 	[
+		"/home/edsonlima/projetos/escola/app/views/alunos/index.html.erb",
+		"/home/edsonlima/projetos/escola/app/views/layouts/application.html.erb",
+		"/home/edsonlima/projetos/escola/app/assets/javascripts/application.js",
+		"/home/edsonlima/projetos/escola/app/controllers/alunos_controller.rb",
+		"/home/edsonlima/projetos/escola/app/controllers/mensalidades_controller.rb",
+		"/home/edsonlima/projetos/escola/app/views/turmas/index.html.erb",
+		"/home/edsonlima/projetos/escola/app/views/turmas/_menu.html.erb",
+		"/home/edsonlima/projetos/escola/app/views/financeiro/aluno_mensalidades.html.erb",
+		"/home/edsonlima/projetos/escola/app/controllers/turmas_controller.rb",
+		"/home/edsonlima/projetos/escola/app/assets/stylesheets/table/demo_table.css",
 		"/home/edsonlima/projetos/escola/Gemfile",
 		"/home/edsonlima/projetos/escola/config/environments/development.rb",
 		"/home/edsonlima/projetos/escola/config/environment.rb",
@@ -194,15 +180,11 @@
 		"/home/edsonlima/projetos/escola/app/views/alunos/_form.html.erb",
 		"/home/edsonlima/projetos/escola/app/controllers/utilitarios_controller.rb",
 		"/home/edsonlima/projetos/escola/app/controllers/application_controller.rb",
-		"/home/edsonlima/projetos/escola/app/views/alunos/index.html.erb",
-		"/home/edsonlima/projetos/escola/app/controllers/mensalidades_controller.rb",
 		"/home/edsonlima/projetos/escola/config/database.yml",
 		"/home/edsonlima/projetos/escola/public/404.html",
 		"/home/edsonlima/projetos/escola/app/views/relatorios/mensalidades_atrasadas_filtro.html.erb",
 		"/home/edsonlima/projetos/escola/app/views/relatorios/mensalidades_atrasadas.html.erb",
 		"/home/edsonlima/projetos/escola/config/routes.rb",
-		"/home/edsonlima/projetos/escola/app/views/layouts/application.html.erb",
-		"/home/edsonlima/projetos/escola/app/views/financeiro/aluno_mensalidades.html.erb",
 		"/home/edsonlima/projetos/escola/app/views/welcome/index.html.erb",
 		"/home/edsonlima/projetos/escola/app/views/devise/sessions/new.html.erb",
 		"/home/edsonlima/projetos/escola/db/seeds.rb",
@@ -288,90 +270,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/views/layouts/application.html.erb",
-					"settings":
-					{
-						"buffer_size": 5413,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1128,
-								1128
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 51.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/alunos/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 1346,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								939,
-								939
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/assets/javascripts/application.js",
-					"settings":
-					{
-						"buffer_size": 641,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								640,
-								640
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -421,6 +321,34 @@
 		"selected_items":
 		[
 			[
+				"mensalida",
+				"app/controllers/mensalidades_controller.rb"
+			],
+			[
+				"aluno_mensa",
+				"app/views/financeiro/aluno_mensalidades.html.erb"
+			],
+			[
+				"turmas/",
+				"app/views/turmas/_menu.html.erb"
+			],
+			[
+				"mensa",
+				"app/controllers/mensalidades_controller.rb"
+			],
+			[
+				"turmas",
+				"app/controllers/turmas_controller.rb"
+			],
+			[
+				"demo",
+				"app/assets/stylesheets/table/demo_table.css"
+			],
+			[
+				"alunos_",
+				"app/controllers/alunos_controller.rb"
+			],
+			[
 				"alunos/in",
 				"app/views/alunos/index.html.erb"
 			],
@@ -459,10 +387,6 @@
 			[
 				"relatorio",
 				"app/controllers/relatorios_controller.rb"
-			],
-			[
-				"mensalida",
-				"app/controllers/mensalidades_controller.rb"
 			],
 			[
 				"mensali",
@@ -505,16 +429,8 @@
 				"app/models/turma.rb"
 			],
 			[
-				"mensa",
-				"app/views/relatorios/mensalidades_atrasadas_filtro.html.erb"
-			],
-			[
 				"mensalidades",
 				"app/views/relatorios/mensalidades_atrasadas.html.erb"
-			],
-			[
-				"aluno_mensa",
-				"app/views/financeiro/aluno_mensalidades.html.erb"
 			],
 			[
 				"welcome/",

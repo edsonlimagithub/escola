@@ -120,7 +120,7 @@
 								<%= number_to_currency(mensalidade.valor, :unit => "R$", :separator => ",", :delimiter => ".") %>
 							</td>
 							<td>
-								<%= mensalidade.vencimento.strftime("%d/%m/%Y") %>
+								<%= mensalidade.vencimento.blank? ? "" : mensalidade.vencimento.strftime("%d/%m/%Y") %>
 							</td>
 							<td>juros</td>
 							<td>multa</td>
