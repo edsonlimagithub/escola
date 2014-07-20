@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1095748833">
+    <data-source source="LOCAL" name="Rails escola: development" uuid="a2af5bc5-c902-4f18-9eb2-3d098b89f4df">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/escola_development</jdbc-url>
+      <user-name>escola</user-name>
+      <user-password>dfcfdfd9dfc9dfc5dfc6dfcb</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails escola: test" uuid="dd9cff23-ca9e-42ff-b007-27950305805a">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/escola_test</jdbc-url>
+      <user-name>escola</user-name>
+      <user-password>dfcfdfd9dfc9dfc5dfc6dfcb</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails escola: production" uuid="de4b4a52-8626-44b4-97f7-10e7b1a45b2a">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/escola_production</jdbc-url>
+      <user-name>escola</user-name>
+      <user-password>dfcfdfd9dfc9dfc5dfc6dfcb</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

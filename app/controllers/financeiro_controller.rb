@@ -78,5 +78,17 @@ class FinanceiroController < ApplicationController
     end  
     redirect_to "/financeiro/aluno_mensalidades/#{mensalidade.aluno.id}"
   end
+
+  def mensalidade_baixa_rapida
+    mensalidade = Mensalidade.find(params[:mensalidade_id])
+    data_quitacao = DateTime.now.to_s(:db)
+    begin
+      mensalidade.data_quitacao = data_quitacao
+      mensalidade.save
+    rescue
+
+    end
+    render :text => "Sucesso na baixa!"
+  end
   
 end

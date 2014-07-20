@@ -17,6 +17,7 @@ Escola::Application.routes.draw do
   match '/financeiro/gerar_boletos'              => 'financeiro#gerar_boletos'
   match '/financeiro/mensalidade_baixa/:id'      => 'financeiro#mensalidade_baixa'
   match '/financeiro/mensalidade_baixa_confirma' => 'financeiro#mensalidade_baixa_confirma'
+  match '/financeiro/mensalidade_baixa_rapida'               => 'financeiro#mensalidade_baixa_rapida'
   
   match '/turma/dashboard/:partial'              => 'turmas#dashboard'
   

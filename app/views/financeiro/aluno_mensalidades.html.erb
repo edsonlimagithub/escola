@@ -46,6 +46,23 @@
 			 // {mensalidade_ids:mensalidade_ids, authenticity_token:authenticity_token}
 		 // );	
 	}
+
+    var confirma_baixa_rapida = function(id){
+        r = confirm("Confirma baixa?");
+        if(r == true){
+            baixa_rapida(id);
+            $("#linha_" + id).hide("slow");
+        }
+    }
+
+    var baixa_rapida = function(id){
+        $.get("/financeiro/mensalidade_baixa_rapida",
+                {mensalidade_id:id},
+                function(retorno){
+                }
+        )
+    }
+
 	
 </script>
 
@@ -115,7 +132,7 @@
 					</thead>
 					<tbody>
 						<% @aluno.mensalidades.each do |mensalidade| %>
-						<tr class="odd gradeX">
+						<tr class="odd gradeX" id="linha_<%= mensalidade.id%>">
 							<td>
 								<%= number_to_currency(mensalidade.valor, :unit => "R$", :separator => ",", :delimiter => ".") %>
 							</td>
@@ -128,6 +145,7 @@
 							<td>total</td>
 							<td>dias vencidos</td>
 							<td>
+                                <%= link_baixa_rapida mensalidade %>
 								<%= link_baixa mensalidade %>
 								<%= link_to 'Editar', edit_mensalidade_path(mensalidade) %>
 								<%= link_to 'Destroy', mensalidade, :class => "btn btn-red",method: :delete, data: { confirm: "Apagar essa mensalidade?" } %>
